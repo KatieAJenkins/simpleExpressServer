@@ -6,10 +6,10 @@ var app = express();
 app.use(express.static('public'));
 
 app.get("/api", function(req, res) {
-  res.send("Hello from API")
-})
+  res.send("Hello from API");
+});
 
-app.use(function(req, res, next){
+app.use(function(req, res){
   res.status(404).send("Not Found");
 });
 
